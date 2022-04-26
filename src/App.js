@@ -43,6 +43,7 @@ function App() {
     setSearchQuery(query);
   };
 
+  // Filter the posts that should be displayed
   useEffect(() => {
     if (searchQuery)
       setFiltered(
@@ -53,6 +54,7 @@ function App() {
     else setFiltered(posts);
   }, [searchQuery, posts]);
 
+  // Result stats
   useEffect(() => {
     setPostStats(filtered.length);
   }, [filtered]);
